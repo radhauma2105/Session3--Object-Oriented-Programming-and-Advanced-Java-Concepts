@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<body> 
+
+<h1>Demo: Error Handling</h1> 
+
+<p id="errorMessage"></p> 
+
+<script> 
+
+try 
+
+{ 
+
+var result  =  Sum(10, 20); // Sum is not defined yet 
+
+} 
+
+catch(ex) 
+
+{ 
+
+document.getElementById("errorMessage").innerHTML = ex; 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 
