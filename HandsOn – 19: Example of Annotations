@@ -1,0 +1,50 @@
+import java.lang.annotation.*;  
+
+ @Retention(RetentionPolicy.RUNTIME)  
+
+@Target(ElementType.METHOD)  
+
+@interface MyAnnotation {  
+
+    String value();  
+
+}  
+
+public class SimpleAnnotationExample {  
+
+     @MyAnnotation("CustomAnnotation")  
+
+    public void annotatedMethod() {  
+
+        System.out.println("This method is annotated!");  
+
+    }  
+
+     public static void main(String[] args) throws NoSuchMethodException {  
+
+        SimpleAnnotationExample example = new SimpleAnnotationExample();  
+
+        example.annotatedMethod();  
+
+         // Retrieving and using the annotation value  
+
+        MyAnnotation annotation = example.getClass().getMethod("annotatedMethod").getAnnotation(MyAnnotation.class);  
+
+        System.out.println("Annotation Value: " + annotation.value());  
+
+    } }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
