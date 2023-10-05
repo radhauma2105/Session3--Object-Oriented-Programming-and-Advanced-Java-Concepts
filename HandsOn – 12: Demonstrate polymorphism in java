@@ -1,0 +1,67 @@
+//Base class: Animal  
+
+class Animal {  
+
+public void makeSound() {  
+
+System.out.println("Some sound is comming");  
+
+}  
+
+}  
+
+ //Derived class: Dog (inherits from Animal)  
+
+class Dog extends Animal {  
+
+@Override  
+
+public void makeSound() {  
+
+System.out.println("Have high sound!");  
+
+}  
+
+}  
+
+//Derived class: Cat (inherits from Animal)  
+
+class Cat extends Animal {  
+
+@Override  
+
+public void makeSound() {  
+
+System.out.println("Crying like meow!");  
+
+}  
+
+}  
+
+public class Demo1 {  
+
+public static void main(String[] args) {  
+
+// Declare Animal reference variable  
+
+Animal myAnimal;  
+
+// Assign a Dog object to the Animal reference  
+
+myAnimal = new Dog();  
+
+// Call makeSound() - Polymorphism in action: Dog's version is called  
+
+myAnimal.makeSound();   
+
+// Assign a Cat object to the Animal reference  
+
+myAnimal = new Cat();  
+
+// Call makeSound() - Polymorphism in action: Cat's version is called  
+
+myAnimal.makeSound();   
+
+}  
+
+}  
